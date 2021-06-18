@@ -1,8 +1,23 @@
 import React from "react";
+import DailyMonitoringSection from "./IndexPageComponents/DailyMonitoringSection/DailyMonitoringSection";
+import DailyTipsSection from "./IndexPageComponents/DailyTipsSection/DailyTipsSection";
+import ChallengeSection from "./IndexPageComponents/ChallengeSection/ChallengeSection";
+import RecommendedChallengeSection from "./IndexPageComponents/RecommendedChallengeSection/RecommendedChallengeSection";
 
 const Test = () => {
   return (
-    <div className="h-full w-full shadow-lg bg-indigo-100 opacity-70 rounded-l-2xl"></div>
+    <div className="h-full shadow-lg bg-indigo-50 opacity-80 rounded-2xl p-4 lg:p-10 overflow-y-scroll space-y-10">
+      <DailyMonitoringSection />
+      <section className="flex flex-col md:flex-row gap-4">
+        <div className="w-full md:w-1/2 lg:w-3/4">
+          <ChallengeSection />
+        </div>
+        <div className="w-full md:w-1/2 lg:w-1/4">
+          <DailyTipsSection />
+        </div>
+      </section>
+      <RecommendedChallengeSection />
+    </div>
   );
 };
 

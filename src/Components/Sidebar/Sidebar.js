@@ -5,39 +5,100 @@ import { AiOutlineStock } from "react-icons/Ai";
 import { ImEye } from "react-icons/Im";
 import { CgClipboard, CgBowl } from "react-icons/Cg";
 import { IoFootballOutline } from "react-icons/io5";
-import { GiMeditation } from "react-icons/Gi";
+import { GiMeditation, GiHamburgerMenu } from "react-icons/Gi";
 import { RiBrushLine, RiHeartPulseLine } from "react-icons/Ri";
+
 const DashboardItems = [
-  { imgLink: <BiHome className="text-xl" />, title: "Overview" },
-  { imgLink: <BiCalendarCheck className="text-xl" />, title: "Daily Plan" },
-  { imgLink: <AiOutlineStock className="text-xl" />, title: "Progress" },
+  {
+    imgLink: (
+      <BiHome className="text-2xl md:text-xl text-gray-500 group-hover:text-pink-500" />
+    ),
+    title: "Overview",
+  },
+  {
+    imgLink: (
+      <BiCalendarCheck className="text-2xl md:text-xl text-gray-500 group-hover:text-pink-500" />
+    ),
+    title: "Daily Plan",
+  },
+  {
+    imgLink: (
+      <AiOutlineStock className="text-2xl md:text-xl text-gray-500 group-hover:text-pink-500" />
+    ),
+    title: "Progress",
+  },
 ];
 const PersonalTipsItems = [
-  { imgLink: <CgBowl className="text-xl" />, title: "Nutrition" },
-  { imgLink: <IoFootballOutline className="text-xl" />, title: "Sport" },
-  { imgLink: <RiBrushLine className="text-xl" />, title: "Beauty" },
-  { imgLink: <RiHeartPulseLine className="text-xl" />, title: "Health" },
-  { imgLink: <GiMeditation className="text-xl" />, title: "Mindfulness" },
+  {
+    imgLink: (
+      <CgBowl className="text-2xl md:text-xl text-gray-500 group-hover:text-pink-500" />
+    ),
+    title: "Nutrition",
+  },
+  {
+    imgLink: (
+      <IoFootballOutline className="text-2xl md:text-xl text-gray-500 group-hover:text-pink-500" />
+    ),
+    title: "Sport",
+  },
+  {
+    imgLink: (
+      <RiBrushLine className="text-2xl md:text-xl text-gray-500 group-hover:text-pink-500" />
+    ),
+    title: "Beauty",
+  },
+  {
+    imgLink: (
+      <RiHeartPulseLine className="text-2xl md:text-xl text-gray-500 group-hover:text-pink-500" />
+    ),
+    title: "Health",
+  },
+  {
+    imgLink: (
+      <GiMeditation className="text-2xl md:text-xl text-gray-500 group-hover:text-pink-500" />
+    ),
+    title: "Mindfulness",
+  },
 ];
 const DataSectionItems = [
-  { imgLink: <BsDroplet className="text-xl" />, title: "Blood" },
-  { imgLink: <ImEye className="text-xl" />, title: "DNA" },
-  { imgLink: <BiRecycle className="text-xl" />, title: "Microbiome" },
-  { imgLink: <CgClipboard className="text-xl" />, title: "Questionnaire" },
+  {
+    imgLink: (
+      <BsDroplet className="text-2xl md:text-xl text-gray-500 group-hover:text-pink-500" />
+    ),
+    title: "Blood",
+  },
+  {
+    imgLink: (
+      <ImEye className="text-2xl md:text-xl text-gray-500 group-hover:text-pink-500" />
+    ),
+    title: "DNA",
+  },
+  {
+    imgLink: (
+      <BiRecycle className="text-2xl md:text-xl text-gray-500 group-hover:text-pink-500" />
+    ),
+    title: "Microbiome",
+  },
+  {
+    imgLink: (
+      <CgClipboard className="text-2xl md:text-xl text-gray-500 group-hover:text-pink-500" />
+    ),
+    title: "Questionnaire",
+  },
 ];
 
 const Sidebar = () => {
   return (
     <div
       id="sidebar"
-      className="p-4 flex flex-col w-96 place-items-center gap-7 h-screen"
+      className="md:p-4 flex flex-col min-w-sm w-2/12 place-items-center gap-7 h-screen"
     >
-      <div id="logo" className="">
+      <div id="logo" className="hidden md:block">
         <img src="/asset/incubate-logo.svg" width={100} />
       </div>
       <div
         id="profileSection"
-        className="flex flex-col place-items-center py-4"
+        className="hidden md:flex md:flex-col place-items-center py-4"
       >
         <div className="w-max ring-4 ring-indigo-400 p-1 object-contain rounded-full">
           <img
@@ -49,42 +110,64 @@ const Sidebar = () => {
         <p className="font-bold text-gray-500 mt-4 text-sm">Daily points</p>
         <h3 className="font-semibold text-3xl tracking-wide">2,466</h3>
       </div>
-      <div className="bg-gray-200 h-0.5 w-3/4"></div>
-      <div id="componentSection" className="space-y-3">
-        <h4 className="text-gray-400 font-bold text-sm">DASHBOARD</h4>
-        <div id="dashboardSection" className="font-semibold">
+      <div className="bg-gray-200 h-0.5 w-3/4 hidden md:block"></div>
+      <div id="componentSection" className="space-y-3 mt-5 md:mt-0">
+        <GiHamburgerMenu className="text-3xl mb-20 md:hidden " />
+        <h4 className="text-gray-400 font-bold text-sm hidden md:block">
+          DASHBOARD
+        </h4>
+        <div id="dashboardSection" className="font-semibold flex flex-col space-y-3 md:space-y-0">
           {DashboardItems.map((item, key) => (
-            <div
-              key={key}
-              className="flex space-x-3 text-lg place-items-center"
-            >
-              {item.imgLink}
-              <p>{item.title}</p>
-            </div>
+            <a href="/">
+              <div
+                key={key}
+                className="flex space-x-3 space-y-2 group text-lg place-items-center"
+              >
+                {item.imgLink}
+
+                <p className="group-hover:text-pink-500 hidden md:block">
+                  {item.title}
+                </p>
+              </div>
+            </a>
           ))}
         </div>
-        <h4 className="text-gray-400 font-bold text-sm">PERSONAL TIPS</h4>
-        <div id="personalTipsSection" className="font-semibold">
+        <div className="bg-gray-200 h-0.5 w-3/4 md:hidden"></div>
+        <h4 className="text-gray-400 font-bold text-sm hidden md:block">
+          PERSONAL TIPS
+        </h4>
+        <div id="personalTipsSection" className="font-semibold flex flex-col space-y-3 md:space-y-0">
           {PersonalTipsItems.map((item, key) => (
-            <div
-              key={key}
-              className="flex space-x-3 text-lg place-items-center"
-            >
-              {item.imgLink}
-              <p>{item.title}</p>
-            </div>
+            <a href="/">
+              <div
+                key={key}
+                className="flex space-x-3 space-y-2 group text-lg place-items-center"
+              >
+                {item.imgLink}
+                <p className="group-hover:text-pink-500 hidden md:block">
+                  {item.title}
+                </p>
+              </div>
+            </a>
           ))}
         </div>
-        <h4 className="text-gray-400 font-bold text-sm">YOUR DATA</h4>
-        <div id="dataSection" className="font-semibold">
+        <div className="bg-gray-200 h-0.5 w-3/4 md:hidden"></div>
+        <h4 className="text-gray-400 font-bold text-sm hidden md:block">
+          YOUR DATA
+        </h4>
+        <div id="dataSection" className="font-semibold flex flex-col space-y-3 md:space-y-0">
           {DataSectionItems.map((item, key) => (
-            <div
-              key={key}
-              className="flex space-x-3 text-lg place-items-center"
-            >
-              {item.imgLink}
-              <p>{item.title}</p>
-            </div>
+            <a href="/">
+              <div
+                key={key}
+                className="flex space-x-3 space-y-2 group text-lg place-items-center"
+              >
+                {item.imgLink}
+                <p className="group-hover:text-pink-500 hidden md:block">
+                  {item.title}
+                </p>
+              </div>
+            </a>
           ))}
         </div>
       </div>

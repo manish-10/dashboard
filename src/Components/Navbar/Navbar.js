@@ -3,19 +3,20 @@ import { BiSearchAlt } from "react-icons/Bi";
 import { VscBellDot } from "react-icons/Vsc";
 import { BsChevronCompactDown } from "react-icons/Bs";
 import Test from "../Test";
+
 const Navbar = () => {
   return (
-    <div className="w-full top-0  pt-2 h-screen space-y-10">
+    <div className="w-full md:w-10/12 top-0 pt-5 h-screen space-y-10 overflow-hidden">
       <div className="px-10">
         <div className="flex m-auto justify-between">
           <div
             id="searchbar"
-            className="w-96 border-2 rounded-full flex place-items-center px-2 space-x-2 overflow-hidden bg-gray-100"
+            className="w-96 border-2 rounded-full flex place-items-center px-2 space-x-2 overflow-hidden bg-gray-100 focus-within:bg-gray-50"
           >
             <BiSearchAlt className="flex mt-1 text-2xl text-gray-500" />
             <div className="h-full w-full place-items-center">
               <input
-                className=" flex-1 focus:outline-none h-full w-full bg-gray-100 font-semibold text-gray-500 p-0"
+                className=" flex-1 focus:outline-none h-full w-full bg-gray-100 focus-within:bg-gray-50 font-semibold text-gray-500 p-0"
                 type="text"
                 placeholder="Type in to Search..."
               />
@@ -41,7 +42,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="h-full">
+      <div className="h-screen pb-28">
         <Test />
       </div>
     </div>
