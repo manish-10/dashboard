@@ -6,13 +6,13 @@ import RecommendedChallengeSection from "../IndexPageComponents/RecommendedChall
 
 const Body = () => {
   return (
-    <div className="h-full shadow-lg bg-indigo-50 opacity-80 rounded-2xl p-4 lg:p-10 overflow-y-scroll space-y-10">
+    <div className="h-full shadow-lg bg-indigo-50 opacity-80 rounded-2xl p-4 lg:p-10 overflow-y-scroll space-y-10 backdrop-filter backdrop-blur-sm">
       <DailyMonitoringSection />
       <section className="flex flex-col md:flex-row gap-4">
-        <div className="w-full md:w-1/2 lg:w-3/4">
+        <div className="w-full md:w-1/2 2xl:w-3/4">
           <ChallengeSection />
         </div>
-        <div className="w-full md:w-1/2 lg:w-1/4">
+        <div className="w-full md:w-1/2 2xl:w-1/4">
           <DailyTipsSection />
         </div>
       </section>

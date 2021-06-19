@@ -80,7 +80,7 @@ const Sidebar = () => {
         isMenuOpen
           ? "w-full justify-start px-4 absolute bg-gradient-to-r from-white via-white to-transparent backdrop-filter backdrop-blur-sm z-20"
           : "w-14 place-items-center"
-      } lg:w-2/12 gap-7 h-screen transition duration-500 ease-out `}
+      } lg:w-2/12 lg:gap-7 h-screen transition duration-1000 ease-out `}
     >
       <a id="logo" href="#" className="hidden lg:block">
         <img src="/asset/incubate-logo.svg" width={100} />
@@ -100,13 +100,26 @@ const Sidebar = () => {
         <h3 className="font-semibold text-3xl tracking-wide">2,466</h3>
       </div>
       <div className="bg-gray-200 h-0.5 w-3/4 hidden lg:block"></div>
-      <div id="componentSection" className="space-y-3 mt-5 md:mt-0">
-        <button
-          onClick={() => setMenuOpen(!isMenuOpen)}
-          className="lg:hidden focus:outline-none mt-3"
+      <button
+        onClick={() => setMenuOpen(!isMenuOpen)}
+        className="lg:hidden focus:outline-none mt-3"
+      >
+        {isMenuOpen ? <Close /> : <Hamburger />}
+      </button>
+
+      <div className={`${isMenuOpen ? "absolute mt-7 ml-10" : "hidden"}`}>
+        <div
+          className={`inline-flex place-content-center w-max ring-2 ring-indigo-400 p-1 object-contain rounded-full`}
         >
-          {isMenuOpen ? <Close /> : <Hamburger />}
-        </button>
+          <img
+            id="userImage"
+            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80"
+            className="rounded-full w-24 h-24 object-cover"
+          />
+        </div>
+      </div>
+
+      <div id="componentSection" className="space-y-3 lg:mt-5 md:mt-0">
         <h4 className="text-gray-400 font-bold text-sm hidden lg:block">
           DASHBOARD
         </h4>

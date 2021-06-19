@@ -8,7 +8,7 @@ const Search = () => {
         fill="currentColor"
         stroke-width="0"
         viewBox="0 0 24 24"
-        class="flex text-2xl text-gray-500"
+        className="flex text-2xl text-gray-500"
         height="1em"
         width="1em"
         xmlns="http://www.w3.org/2000/svg"
@@ -22,13 +22,13 @@ const Search = () => {
 
 const ResponsiveSearch = () => {
   return (
-    <>
+    <div>
       <svg
         stroke="currentColor"
         fill="currentColor"
         stroke-width="0"
         viewBox="0 0 24 24"
-        class="flex text-2xl text-gray-500"
+        className="flex text-2xl text-gray-500"
         height="1em"
         width="1em"
         xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@ const ResponsiveSearch = () => {
         <path d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z"></path>
         <path d="M11.412,8.586C11.791,8.966,12,9.468,12,10h2c0-1.065-0.416-2.069-1.174-2.828c-1.514-1.512-4.139-1.512-5.652,0 l1.412,1.416C9.346,7.83,10.656,7.832,11.412,8.586z"></path>
       </svg>
-    </>
+    </div>
   );
 };
 
@@ -50,7 +50,7 @@ const Bell = () => {
         viewBox="0 0 24 24"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="text-2xl md:text-3xl animate-pulse"
+        className="text-2xl md:text-3xl animate-pulse"
         height="1em"
         width="1em"
         xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,7 @@ const Chevron = () => {
         fill="currentColor"
         stroke-width="0"
         viewBox="0 0 16 16"
-        class="text-lg font-semibold group-hover:text-gray-500"
+        className="text-lg font-semibold group-hover:text-gray-500"
         height="1em"
         width="1em"
         xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +122,7 @@ const SignOut = () => {
         fill="currentColor"
         stroke-width="0"
         viewBox="0 0 24 24"
-        class="text-red-400"
+        className="text-red-400"
         height="1em"
         width="1em"
         xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +141,7 @@ const ModalSearch = () => {
         fill="currentColor"
         stroke-width="0"
         viewBox="0 0 24 24"
-        class="flex text-2xl text-gray-500"
+        className="flex text-2xl text-gray-500"
         height="1em"
         width="1em"
         xmlns="http://www.w3.org/2000/svg"
@@ -160,7 +160,7 @@ const Close = () => {
         fill="currentColor"
         stroke-width="0"
         viewBox="0 0 1024 1024"
-        class="absolute top-5 right-5 text-3xl"
+        className="absolute top-5 right-5 text-3xl"
         height="1em"
         width="1em"
         xmlns="http://www.w3.org/2000/svg"

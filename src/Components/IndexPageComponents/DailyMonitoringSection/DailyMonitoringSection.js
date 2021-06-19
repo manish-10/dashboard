@@ -32,7 +32,7 @@ const CardDetails = [
   },
   {
     color: "red-300",
-    title: "Sleeping Analysis",
+    title: "Sleeping Time ",
     value: "7h 35 min",
     desc: "IN BED AVERAGE",
     icon: <Moon />,
@@ -47,12 +47,12 @@ const DailyMonitoringSection = () => {
         </h4>
         <a
           href="#"
-          className="flex text-gray-400 text-sm font-bold place-items-center hover:text-gray-600"
+          className="hidden md:flex text-gray-400 text-sm font-bold place-items-center hover:text-gray-600"
         >
           See Programs <ChevronRight />
         </a>
       </div>
-      <div className="flex flex-wrap lg:flex-nowrap w-full place-content-center md:justify-between m-auto space-x-4">
+      <div className="flex flex-wrap lg:flex-nowrap w-full place-content-center justify-evenly lg:justify-between m-auto  space-x-3 md:space-x-1 lg:space-x-4">
         {CardDetails.map((itemDetail, key) => (
           <Card key={key} cardDetails={itemDetail} />
         ))}

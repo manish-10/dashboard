@@ -10,7 +10,7 @@ const ChallengeSection = () => {
       <div className="flex relative bg-gradient-to-r from-white to-white lg:to-transparent rounded-xl overflow-hidden h-full shadow-xl hover:shadow-md">
         <div
           id="challenge-text"
-          className="flex flex-col w-full lg:w-1/2 max-w-lg p-10 space-y-5 z-10"
+          className="flex flex-col w-full 2xl:w-1/2 max-w-lg p-10 space-y-5 z-10"
         >
           <p className="flex text-2xl font-semibold place-items-center gap-2 text-indigo-500">
             <Drink />
@@ -35,7 +35,7 @@ const ChallengeSection = () => {
             </div>
           </div>
           <br />
-          <div className="w-full md:w-3/4 flex flex-wrap md:flex-nowrap gap-4 md:gap-1 place-items-center">
+          <div className="w-full xl:w-3/4 flex flex-wrap md:flex-nowrap gap-4 md:gap-1 place-items-center">
             <button className="m-auto bg-black mix-blend-darken text-white rounded-full uppercase p-2 px-4 text-xs font-bold tracking-widest leading-5 hover:bg-gray-800 focus:outline-none">
               Add Challege
             </button>
@@ -47,7 +47,7 @@ const ChallengeSection = () => {
             </a>
           </div>
         </div>
-        <div className="object-scale-down hidden lg:flex">
+        <div className="object-scale-down hidden 2xl:flex">
           <img
             src="/asset/smoothie.png"
             className="absolute right-0 filter mix-blend-darken"

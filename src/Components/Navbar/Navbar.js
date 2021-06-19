@@ -15,14 +15,14 @@ const Navbar = () => {
             onClick={() => setisInputMode(true)}
             className="focus:outline-none md:hidden"
           >
-            <Search />
+            <ResponsiveSearch />
           </button>
           {isInputMode && <MobileSearchModal setisInputMode={setisInputMode} />}
           <div
             id="searchbar"
             className="hidden md:flex w-96 border-2 rounded-2xl place-items-center px-2 space-x-2 overflow-hidden bg-gray-100 focus-within:bg-gray-50"
           >
-            <ResponsiveSearch />
+            <Search />
             <div className="h-full w-full place-items-center">
               <input
                 className="flex-1 focus:outline-none h-full w-full bg-gray-100 focus-within:bg-gray-50 font-semibold text-gray-500 p-0"

@@ -30,18 +30,19 @@ const DailyTipsSection = () => {
           </a>
         </div>
       </div>
-      <div className="flex flex-col divide-y-4 bg-white bg-opacity-70 shadow p-7 rounded-2xl gap-4">
+      <div className="flex flex-col bg-white bg-opacity-70 shadow p-7 rounded-2xl gap-4 font-semibold">
         {DailyTips.map((tip, key) => (
           <div key={key} className="space-y-2 mt-2">
             <h2 className="font-bold text-lg">{tip.title}</h2>
             <p className="text-sm font-semibold">{tip.desc}</p>
-            <div>
+            <div className="space-y-5 2xl:space-y-1">
               <a href="/#">
                 <div className="text-green-500 hover:text-green-700 font-semibold flex place-items-center text-sm">
                   <ChevronRightGreen />
                   <p>Find out more</p>
                 </div>
               </a>
+              <div className="bg-gray-400 w-full h-0.5 bg-opacity-50"></div>
             </div>
           </div>
         ))}
