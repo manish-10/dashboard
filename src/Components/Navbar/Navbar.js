@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BiSearchAlt } from "react-icons/Bi";
+import { AiOutlineSearch } from "react-icons/Ai";
 import { FiBell } from "react-icons/Fi";
 import { BsChevronCompactDown } from "react-icons/Bs";
 import Test from "../Test";
@@ -18,14 +18,14 @@ const Navbar = () => {
             onClick={() => setisInputMode(true)}
             className="focus:outline-none md:hidden"
           >
-            <BiSearchAlt className="flex text-3xl text-gray-500" />
+            <AiOutlineSearch className="flex text-3xl text-gray-500" />
           </button>
           {isInputMode && <MobileSearchModal setisInputMode={setisInputMode} />}
           <div
             id="searchbar"
             className="hidden md:flex w-96 border-2 rounded-2xl place-items-center px-2 space-x-2 overflow-hidden bg-gray-100 focus-within:bg-gray-50"
           >
-            <BiSearchAlt className="flex mt-1 text-2xl text-gray-500" />
+            <AiOutlineSearch className="flex mt-1 text-2xl text-gray-500" />
             <div className="h-full w-full place-items-center">
               <input
                 className="flex-1 focus:outline-none h-full w-full bg-gray-100 focus-within:bg-gray-50 font-semibold text-gray-500 p-0"
