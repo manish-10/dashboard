@@ -1,5 +1,5 @@
 import React from "react";
-import { FiChevronRight } from "react-icons/Fi";
+import { ChevronRightGreen } from "../indexpage-icons-svg";
 
 const DailyTips = [
   {
@@ -22,8 +22,11 @@ const DailyTipsSection = () => {
       <div className="flex justify-between px-2 pb-2">
         <h3 className="font-semibold text-xl tracking-wide">Daily Tips</h3>
         <div className="flex place-items-center text-gray-700 space-x-1">
-          <a href="#" className="flex text-gray-400 text-sm font-bold place-items-center hover:text-gray-600">
-            See all <FiChevronRight />
+          <a
+            href="#"
+            className="flex text-gray-400 text-sm font-bold place-items-center hover:text-gray-600"
+          >
+            See all <ChevronRightGreen />
           </a>
         </div>
       </div>
@@ -35,7 +38,7 @@ const DailyTipsSection = () => {
             <div>
               <a href="/#">
                 <div className="text-green-500 hover:text-green-700 font-semibold flex place-items-center text-sm">
-                  <FiChevronRight className="" />
+                  <ChevronRightGreen />
                   <p>Find out more</p>
                 </div>
               </a>

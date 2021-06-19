@@ -1,88 +1,72 @@
 import { useState } from "react";
-import { BsDroplet } from "react-icons/Bs";
-import { BiHome, BiRecycle, BiCalendarCheck } from "react-icons/Bi";
-import { AiOutlineStock, AiOutlineMenu, AiOutlineClose } from "react-icons/Ai";
-import { ImEye } from "react-icons/Im";
-import { CgClipboard, CgBowl } from "react-icons/Cg";
-import { IoFootballOutline } from "react-icons/io5";
-import { GiMeditation } from "react-icons/Gi";
-import { RiBrushLine, RiHeartPulseLine } from "react-icons/Ri";
+import {
+  Overview,
+  Calender,
+  Progress,
+  Nutrition,
+  Sports,
+  Beauty,
+  Health,
+  Mind,
+  Blood,
+  DNA,
+  Recycle,
+  Question,
+  Hamburger,
+  Close,
+} from "./sidebar-icons-svg";
 
 const DashboardItems = [
   {
-    imgLink: (
-      <BiHome className="text-2xl md:text-xl text-gray-500 group-hover:text-pink-500" />
-    ),
+    imgLink: <Overview />,
     title: "Overview",
   },
   {
-    imgLink: (
-      <BiCalendarCheck className="text-2xl md:text-xl text-gray-500 group-hover:text-pink-500" />
-    ),
+    imgLink: <Calender />,
     title: "Daily Plan",
   },
   {
-    imgLink: (
-      <AiOutlineStock className="text-2xl md:text-xl text-gray-500 group-hover:text-pink-500" />
-    ),
+    imgLink: <Progress />,
     title: "Progress",
   },
 ];
 const PersonalTipsItems = [
   {
-    imgLink: (
-      <CgBowl className="text-2xl md:text-xl text-gray-500 group-hover:text-pink-500" />
-    ),
+    imgLink: <Nutrition />,
     title: "Nutrition",
   },
   {
-    imgLink: (
-      <IoFootballOutline className="text-2xl md:text-xl text-gray-500 group-hover:text-pink-500" />
-    ),
+    imgLink: <Sports />,
     title: "Sport",
   },
   {
-    imgLink: (
-      <RiBrushLine className="text-2xl md:text-xl text-gray-500 group-hover:text-pink-500" />
-    ),
+    imgLink: <Beauty />,
     title: "Beauty",
   },
   {
-    imgLink: (
-      <RiHeartPulseLine className="text-2xl md:text-xl text-gray-500 group-hover:text-pink-500" />
-    ),
+    imgLink: <Health />,
     title: "Health",
   },
   {
-    imgLink: (
-      <GiMeditation className="text-2xl md:text-xl text-gray-500 group-hover:text-pink-500" />
-    ),
+    imgLink: <Mind />,
     title: "Mindfulness",
   },
 ];
 const DataSectionItems = [
   {
-    imgLink: (
-      <BsDroplet className="text-2xl md:text-xl text-gray-500 group-hover:text-pink-500" />
-    ),
+    imgLink: <Blood />,
     title: "Blood",
   },
   {
-    imgLink: (
-      <ImEye className="text-2xl md:text-xl text-gray-500 group-hover:text-pink-500" />
-    ),
+    imgLink: <DNA />,
     title: "DNA",
   },
   {
-    imgLink: (
-      <BiRecycle className="text-2xl md:text-xl text-gray-500 group-hover:text-pink-500" />
-    ),
+    imgLink: <Recycle />,
     title: "Microbiome",
   },
   {
-    imgLink: (
-      <CgClipboard className="text-2xl md:text-xl text-gray-500 group-hover:text-pink-500" />
-    ),
+    imgLink: <Question />,
     title: "Questionnaire",
   },
 ];
@@ -96,14 +80,14 @@ const Sidebar = () => {
         isMenuOpen
           ? "w-full justify-start px-4 absolute bg-gradient-to-r from-white via-white to-transparent backdrop-filter backdrop-blur-sm z-20"
           : "w-14 place-items-center"
-      } md:w-2/12 gap-7 h-screen transition duration-500 ease-out `}
+      } lg:w-2/12 gap-7 h-screen transition duration-500 ease-out `}
     >
-      <a id="logo" href="#" className="hidden md:block">
+      <a id="logo" href="#" className="hidden lg:block">
         <img src="/asset/incubate-logo.svg" width={100} />
       </a>
       <div
         id="profileSection"
-        className="hidden md:flex md:flex-col place-items-center py-4"
+        className="hidden lg:flex lg:flex-col place-items-center py-4"
       >
         <div className="w-max ring-4 ring-indigo-400 p-1 object-contain rounded-full">
           <img
@@ -115,24 +99,20 @@ const Sidebar = () => {
         <p className="font-bold text-gray-500 mt-4 text-sm">Daily points</p>
         <h3 className="font-semibold text-3xl tracking-wide">2,466</h3>
       </div>
-      <div className="bg-gray-200 h-0.5 w-3/4 hidden md:block"></div>
+      <div className="bg-gray-200 h-0.5 w-3/4 hidden lg:block"></div>
       <div id="componentSection" className="space-y-3 mt-5 md:mt-0">
         <button
           onClick={() => setMenuOpen(!isMenuOpen)}
-          className="md:hidden focus:outline-none mt-3"
+          className="lg:hidden focus:outline-none mt-3"
         >
-          {isMenuOpen ? (
-            <AiOutlineClose className="text-3xl mb-20" />
-          ) : (
-            <AiOutlineMenu className="text-3xl mb-20" />
-          )}
+          {isMenuOpen ? <Close /> : <Hamburger />}
         </button>
-        <h4 className="text-gray-400 font-bold text-sm hidden md:block">
+        <h4 className="text-gray-400 font-bold text-sm hidden lg:block">
           DASHBOARD
         </h4>
         <div
           id="dashboardSection"
-          className="font-semibold flex flex-col space-y-3 md:space-y-0"
+          className="font-semibold flex flex-col space-y-3 lg:space-y-0"
         >
           {DashboardItems.map((item, key) => (
             <a href="#" key={key}>
@@ -141,7 +121,7 @@ const Sidebar = () => {
                 <p
                   className={`group-hover:text-pink-500 ${
                     isMenuOpen ? "block" : "hidden"
-                  } md:block`}
+                  } lg:block`}
                 >
                   {item.title}
                 </p>
@@ -152,14 +132,14 @@ const Sidebar = () => {
         <div
           className={`bg-gray-200 h-0.5 ${
             isMenuOpen ? "w-1/4" : "w-3/4"
-          } md:hidden`}
+          } lg:hidden`}
         ></div>
-        <h4 className="text-gray-400 font-bold text-sm hidden md:block">
+        <h4 className="text-gray-400 font-bold text-sm hidden lg:block">
           PERSONAL TIPS
         </h4>
         <div
           id="personalTipsSection"
-          className="font-semibold flex flex-col space-y-3 md:space-y-0"
+          className="font-semibold flex flex-col space-y-3 lg:space-y-0"
         >
           {PersonalTipsItems.map((item, key) => (
             <a href="#" key={key}>
@@ -168,7 +148,7 @@ const Sidebar = () => {
                 <p
                   className={`group-hover:text-pink-500 ${
                     isMenuOpen ? "block" : "hidden"
-                  } md:block`}
+                  } lg:block`}
                 >
                   {item.title}
                 </p>
@@ -179,14 +159,14 @@ const Sidebar = () => {
         <div
           className={`bg-gray-200 h-0.5 ${
             isMenuOpen ? "w-1/4" : "w-3/4"
-          } md:hidden`}
+          } lg:hidden`}
         ></div>
-        <h4 className="text-gray-400 font-bold text-sm hidden md:block">
+        <h4 className="text-gray-400 font-bold text-sm hidden lg:block">
           YOUR DATA
         </h4>
         <div
           id="dataSection"
-          className="font-semibold flex flex-col space-y-3 md:space-y-0"
+          className="font-semibold flex flex-col space-y-3 lg:space-y-0"
         >
           {DataSectionItems.map((item, key) => (
             <a href="#" key={key}>
@@ -195,7 +175,7 @@ const Sidebar = () => {
                 <p
                   className={`group-hover:text-pink-500 ${
                     isMenuOpen ? "block" : "hidden"
-                  } md:block`}
+                  } lg:block`}
                 >
                   {item.title}
                 </p>

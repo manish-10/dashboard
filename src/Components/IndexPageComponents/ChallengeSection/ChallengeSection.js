@@ -1,5 +1,6 @@
 import React from "react";
-import { MdLocalDrink } from "react-icons/Md";
+import { Drink } from "../indexpage-icons-svg";
+
 const ChallengeSection = () => {
   return (
     <div className="space-y-3">
@@ -12,7 +13,7 @@ const ChallengeSection = () => {
           className="flex flex-col w-full lg:w-1/2 max-w-lg p-10 space-y-5 z-10"
         >
           <p className="flex text-2xl font-semibold place-items-center gap-2 text-indigo-500">
-            <MdLocalDrink />
+            <Drink />
             Early Morning Smoothie
           </p>
 
@@ -38,7 +39,10 @@ const ChallengeSection = () => {
             <button className="m-auto bg-black mix-blend-darken text-white rounded-full uppercase p-2 px-4 text-xs font-bold tracking-widest leading-5 hover:bg-gray-800 focus:outline-none">
               Add Challege
             </button>
-            <a href="/" className="m-auto font-bold text-sm text-green-500 uppercase tracking-wider hover:text-green-800 focus:outline-none">
+            <a
+              href="/"
+              className="m-auto font-bold text-sm text-green-500 uppercase tracking-wider hover:text-green-800 focus:outline-none"
+            >
               Challenge Friend
             </a>
           </div>

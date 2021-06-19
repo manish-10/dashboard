@@ -1,10 +1,10 @@
 import React from "react";
-import DailyMonitoringSection from "./IndexPageComponents/DailyMonitoringSection/DailyMonitoringSection";
-import DailyTipsSection from "./IndexPageComponents/DailyTipsSection/DailyTipsSection";
-import ChallengeSection from "./IndexPageComponents/ChallengeSection/ChallengeSection";
-import RecommendedChallengeSection from "./IndexPageComponents/RecommendedChallengeSection/RecommendedChallengeSection";
+import DailyMonitoringSection from "../IndexPageComponents/DailyMonitoringSection/DailyMonitoringSection";
+import DailyTipsSection from "../IndexPageComponents/DailyTipsSection/DailyTipsSection";
+import ChallengeSection from "../IndexPageComponents/ChallengeSection/ChallengeSection";
+import RecommendedChallengeSection from "../IndexPageComponents/RecommendedChallengeSection/RecommendedChallengeSection";
 
-const Test = () => {
+const Body = () => {
   return (
     <div className="h-full shadow-lg bg-indigo-50 opacity-80 rounded-2xl p-4 lg:p-10 overflow-y-scroll space-y-10">
       <DailyMonitoringSection />
@@ -21,4 +21,4 @@ const Test = () => {
   );
 };
 
-export default Test;
+export default Body;
