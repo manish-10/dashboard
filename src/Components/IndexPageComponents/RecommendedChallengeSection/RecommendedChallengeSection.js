@@ -52,19 +52,19 @@ const RecommendedChallengeSection = () => {
           Recommended Challenges
         </h2>
         <div className="flex font-semibold space-x-1">
-          <FaChevronLeft className="text-gray-400"/>
-          <FaChevronRight />
+          <FaChevronLeft className="text-gray-400 cursor-not-allowed" />
+          <FaChevronRight className="text-gray-900 cursor-pointer" />
         </div>
       </div>
       <div className="flex flex-col md:flex-row gap-10 place-items-center md:justify-between">
         {CardDetails.map((card, key) => (
           <div
             key={key}
-            className={`flex-grow md:flex relative justify-center overflow-hidden w-full max-w-sm lg:w-1/4 h-60 rounded-2xl ${card.bgGrad}`}
+            className={`flex-grow md:flex relative justify-center overflow-hidden w-full max-w-sm lg:w-1/4 h-60 rounded-2xl shadow-lg hover:shadow-none ${card.bgGrad}`}
           >
-            <div className="h-10 w-10 absolute bg-white bg-opacity-30 rounded-full right-4 top-4 flex place-items-center">
+            <a href="#" className="h-10 w-10 absolute bg-white bg-opacity-30 rounded-full right-4 top-4 flex place-items-center transform transition duration-300 ease-linear hover:scale-125">
               <HiPlusSm className="text-white text-4xl m-auto" />
-            </div>
+            </a>
             <img
               src={card.imgLink}
               className="absolute mt-4 filter saturate-125 contrast-125 object-center"

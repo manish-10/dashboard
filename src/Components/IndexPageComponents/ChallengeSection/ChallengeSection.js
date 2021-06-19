@@ -4,12 +4,12 @@ const ChallengeSection = () => {
   return (
     <div className="space-y-3">
       <div className="flex justify-start">
-        <p className="text-xl font-semibold">Challenge</p>
+        <p className="font-semibold text-xl tracking-wide">Challenge</p>
       </div>
-      <div class="flex relative bg-gradient-to-r from-white to-white lg:to-transparent rounded-xl overflow-hidden h-full z-10">
+      <div className="flex relative bg-gradient-to-r from-white to-white lg:to-transparent rounded-xl overflow-hidden h-full shadow-xl hover:shadow-md">
         <div
           id="challenge-text"
-          className="flex flex-col w-full lg:w-1/2 max-w-lg p-10 space-y-5"
+          className="flex flex-col w-full lg:w-1/2 max-w-lg p-10 space-y-5 z-10"
         >
           <p className="flex text-2xl font-semibold place-items-center gap-2 text-indigo-500">
             <MdLocalDrink />
@@ -38,9 +38,9 @@ const ChallengeSection = () => {
             <button className="m-auto bg-black mix-blend-darken text-white rounded-full uppercase p-2 px-4 text-xs font-bold tracking-widest leading-5 hover:bg-gray-800 focus:outline-none">
               Add Challege
             </button>
-            <button className="m-auto font-bold text-sm text-green-500 uppercase tracking-wider hover:text-green-800 focus:outline-none">
+            <a href="/" className="m-auto font-bold text-sm text-green-500 uppercase tracking-wider hover:text-green-800 focus:outline-none">
               Challenge Friend
-            </button>
+            </a>
           </div>
         </div>
         <div className="object-scale-down hidden lg:flex">

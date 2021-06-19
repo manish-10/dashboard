@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = ({ cardDetails }) => {
   return (
-    <div className="flex place-items-center w-64 md:w-80 my-4 rounded-2xl bg-white bg-opacity-70 shadow-xl p-2 lg:p-7 lg:px-10 gap-7 justify-evenly text-gray-900 antialiased">
+    <div className="flex place-items-center w-64 md:w-80 my-4 rounded-2xl bg-white bg-opacity-70 shadow-xl p-2 lg:px-7 justify-evenly text-gray-900 antialiased transform transition duration-300 ease-in hover:scale-110">
       <div
         id="iconBg"
         className={`relative flex bg-${cardDetails.color} bg-opacity-20 h-14 w-14 place-items-center rounded-full`}

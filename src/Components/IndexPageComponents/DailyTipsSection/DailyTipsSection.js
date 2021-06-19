@@ -1,5 +1,5 @@
 import React from "react";
-import { FaChevronRight } from "react-icons/Fa";
+import { FiChevronRight } from "react-icons/Fi";
 
 const DailyTips = [
   {
@@ -22,21 +22,24 @@ const DailyTipsSection = () => {
       <div className="flex justify-between px-2 pb-2">
         <h3 className="font-semibold text-xl tracking-wide">Daily Tips</h3>
         <div className="flex place-items-center text-gray-700 space-x-1">
-          <p className="">See all</p>
-          <FaChevronRight className="text-xs"/>
+          <a href="#" className="flex text-gray-400 text-sm font-bold place-items-center hover:text-gray-600">
+            See all <FiChevronRight />
+          </a>
         </div>
       </div>
-      <div className="flex flex-col divide-y-4 bg-white bg-opacity-70 shadow-xl p-7 rounded-2xl gap-4">
+      <div className="flex flex-col divide-y-4 bg-white bg-opacity-70 shadow p-7 rounded-2xl gap-4">
         {DailyTips.map((tip, key) => (
           <div key={key} className="space-y-2 mt-2">
             <h2 className="font-bold text-lg">{tip.title}</h2>
             <p className="text-sm font-semibold">{tip.desc}</p>
-            <button>
-              <div className="text-green-500 font-semibold flex place-items-center text-sm">
-                <FaChevronRight className="text-xs"/>
-                <p>Find out more</p>
-              </div>
-            </button>
+            <div>
+              <a href="/#">
+                <div className="text-green-500 hover:text-green-700 font-semibold flex place-items-center text-sm">
+                  <FiChevronRight className="" />
+                  <p>Find out more</p>
+                </div>
+              </a>
+            </div>
           </div>
         ))}
       </div>
