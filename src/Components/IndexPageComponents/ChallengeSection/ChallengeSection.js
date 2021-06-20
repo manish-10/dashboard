@@ -36,9 +36,9 @@ const ChallengeSection = () => {
           </div>
           <br />
           <div className="w-full xl:w-3/4 flex flex-wrap md:flex-nowrap gap-4 md:gap-1 place-items-center">
-            <button className="m-auto bg-black mix-blend-darken text-white rounded-full uppercase p-2 px-4 text-xs font-bold tracking-widest leading-5 hover:bg-gray-800 focus:outline-none">
+            <div className="m-auto bg-black mix-blend-darken text-white rounded-full uppercase p-2 px-4 text-xs font-bold tracking-widest leading-5 hover:bg-gray-800 focus:outline-none">
               Add Challege
-            </button>
+            </div>
             <a
               href="/"
               className="m-auto font-bold text-sm text-green-500 uppercase tracking-wider hover:text-green-800 focus:outline-none"

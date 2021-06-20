@@ -9,20 +9,20 @@ const Navbar = () => {
 
   return (
     <div className="w-full flex-1 md:w-10/12 top-0 pt-5 h-screen space-y-10 overflow-hidden">
-      <div className="px-2 md:px-10">
+      <div className=" px-6 md:px-10">
         <div className="flex m-auto justify-between">
-          <button
+          <div
             onClick={() => setisInputMode(true)}
             className="focus:outline-none md:hidden"
           >
-            <ResponsiveSearch />
-          </button>
+            <Search />
+          </div>
           {isInputMode && <MobileSearchModal setisInputMode={setisInputMode} />}
           <div
             id="searchbar"
             className="hidden md:flex w-96 border-2 rounded-2xl place-items-center px-2 space-x-2 overflow-hidden bg-gray-100 focus-within:bg-gray-50"
           >
-            <Search />
+            <ResponsiveSearch />
             <div className="h-full w-full place-items-center">
               <input
                 className="flex-1 focus:outline-none h-full w-full bg-gray-100 focus-within:bg-gray-50 font-semibold text-gray-500 p-0"
@@ -44,14 +44,14 @@ const Navbar = () => {
                 />
               </div>
             </div>
-            <button
+            <div
               className="group flex text-lg font-semibold place-items-center gap-1 focus:outline-none"
               onClick={() => setModalOpen(!isModalOpen)}
             >
               <p className="group-hover:text-gray-500">Jane Doe</p>
               <Chevron />
               {isModalOpen && <UserModal />}
-            </button>
+            </div>
           </div>
         </div>
       </div>

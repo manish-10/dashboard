@@ -79,7 +79,7 @@ const Sidebar = () => {
       className={`md:p-4 flex flex-col ${
         isMenuOpen
           ? "w-full justify-start px-4 absolute bg-gradient-to-r from-white via-white to-transparent backdrop-filter backdrop-blur-sm z-20"
-          : "w-14 place-items-center"
+          : " w-10 md:w-14 place-items-center"
       } lg:w-2/12 lg:gap-7 h-screen transition duration-1000 ease-out `}
     >
       <a id="logo" href="#" className="hidden lg:block">
@@ -100,12 +100,12 @@ const Sidebar = () => {
         <h3 className="font-semibold text-3xl tracking-wide">2,466</h3>
       </div>
       <div className="bg-gray-200 h-0.5 w-3/4 hidden lg:block"></div>
-      <button
+      <div
         onClick={() => setMenuOpen(!isMenuOpen)}
         className="lg:hidden focus:outline-none mt-3"
       >
         {isMenuOpen ? <Close /> : <Hamburger />}
-      </button>
+      </div>
 
       <div className={`${isMenuOpen ? "absolute mt-7 ml-10" : "hidden"}`}>
         <div
@@ -128,7 +128,7 @@ const Sidebar = () => {
           className="font-semibold flex flex-col space-y-3 lg:space-y-0"
         >
           {DashboardItems.map((item, key) => (
-            <a href="#" key={key}>
+            <div href="#" key={key}>
               <div className="flex space-x-3 space-y-2 group text-lg place-items-center">
                 {item.imgLink}
                 <p
@@ -139,7 +139,7 @@ const Sidebar = () => {
                   {item.title}
                 </p>
               </div>
-            </a>
+            </div>
           ))}
         </div>
         <div
@@ -155,7 +155,7 @@ const Sidebar = () => {
           className="font-semibold flex flex-col space-y-3 lg:space-y-0"
         >
           {PersonalTipsItems.map((item, key) => (
-            <a href="#" key={key}>
+            <div href="#" key={key}>
               <div className="flex space-x-3 space-y-2 group text-lg place-items-center">
                 {item.imgLink}
                 <p
@@ -166,7 +166,7 @@ const Sidebar = () => {
                   {item.title}
                 </p>
               </div>
-            </a>
+            </div>
           ))}
         </div>
         <div
@@ -182,7 +182,7 @@ const Sidebar = () => {
           className="font-semibold flex flex-col space-y-3 lg:space-y-0"
         >
           {DataSectionItems.map((item, key) => (
-            <a href="#" key={key}>
+            <div href="#" key={key}>
               <div className="flex space-x-3 space-y-2 group text-lg place-items-center">
                 {item.imgLink}
                 <p
@@ -193,7 +193,7 @@ const Sidebar = () => {
                   {item.title}
                 </p>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>
