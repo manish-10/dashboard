@@ -11,12 +11,12 @@ const Navbar = () => {
     <div className="w-full flex-1 md:w-10/12 top-0 pt-5 h-screen space-y-10 overflow-hidden">
       <div className=" px-6 md:px-10">
         <div className="flex m-auto justify-between">
-          <div
+          <button
             onClick={() => setisInputMode(true)}
             className="focus:outline-none md:hidden"
           >
             <Search />
-          </div>
+          </button>
           {isInputMode && <MobileSearchModal setisInputMode={setisInputMode} />}
           <div
             id="searchbar"
@@ -36,7 +36,7 @@ const Navbar = () => {
               <Bell />
             </a>
             <div id="dropdown">
-              <div className="w-max ring-2 ring-indigo-400 p-0.5 object-contain rounded-full">
+              <div className="w-max ring-2 ring-indigo-400 p-0.5 object-contain rounded-full hidden md:block">
                 <img
                   id="userImage"
                   src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80"
@@ -44,14 +44,14 @@ const Navbar = () => {
                 />
               </div>
             </div>
-            <div
+            <button
               className="group flex text-lg font-semibold place-items-center gap-1 focus:outline-none"
               onClick={() => setModalOpen(!isModalOpen)}
             >
               <p className="group-hover:text-gray-500">Jane Doe</p>
               <Chevron />
               {isModalOpen && <UserModal />}
-            </div>
+            </button>
           </div>
         </div>
       </div>
