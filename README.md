@@ -1,6 +1,6 @@
 # Dashboard UI - [Link](https://incubate-task.vercel.app)
 
-![full page](https://cdn.discordapp.com/attachments/834885306770915409/856030767829876766/dashboard.gif)
+![full page](https://cdn.discordapp.com/attachments/834885306770915409/856037189925339136/ss1.png)
 
 ## Mobile UI
 
